@@ -4,7 +4,7 @@ import { UserContext } from '../App';
 import { useContext } from 'react';
 import jwt_decode from 'jwt-decode';
 export default function TaskCard({title, isCompleted, taskId}){
-    const baseURL = 'http://localhost:5000'
+    const baseURL = 'https://node-api-for-todo-app.onrender.com'
     const [isChecked, setIsChecked] = useState(isCompleted)
     const [user, setUser, tasks, setTasks] = useContext(UserContext)
     const [isEditing, setIsEditing] = useState(false)
