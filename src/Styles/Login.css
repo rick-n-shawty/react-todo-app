@@ -1,0 +1,134 @@
+.Login-Container {
+  display: flex;
+  background-color: #121212;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.Login-Container form {
+  display: flex;
+  flex-direction: column;
+}
+.Login-Container form h1 {
+  color: rgb(236, 229, 229);
+  margin-top: 0;
+}
+.Login-Container form h3 {
+  color: red;
+  margin: 0;
+}
+.Login-Container form .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Login-Container form .buttons button {
+  cursor: pointer;
+  width: 100%;
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+.Login-Container form .buttons button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Login-Container form .buttons button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+.Login-Container form .buttons button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+.Login-Container form .buttons button:hover {
+  background-color: var(--hover-color);
+}
+.Login-Container form .buttons button:hover .arrow {
+  background: var(--secondary-color);
+}
+.Login-Container form .buttons button:hover .arrow:before {
+  right: 0;
+}
+.Login-Container form .buttons a {
+  text-decoration: none;
+  color: white;
+}
+.Login-Container form .inputbox {
+  position: relative;
+  width: 196px;
+  margin-bottom: 1rem;
+}
+.Login-Container form .inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.Login-Container form .inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.Login-Container form .inputbox input:valid ~ span,
+.Login-Container form .inputbox input:focus ~ span {
+  color: white;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0, 75em;
+}
+.Login-Container form .inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #534dcb;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.Login-Container form .inputbox input:valid ~ i,
+.Login-Container form .inputbox input:focus ~ i {
+  height: 44px;
+}/*# sourceMappingURL=Login.css.map */
