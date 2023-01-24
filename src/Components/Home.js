@@ -5,7 +5,7 @@ import axios from 'axios';
 import TaskCard from "./TaskCard";
 import jwt_decode from 'jwt-decode';
 export default function Home({}){
-    const baseURL = 'http://localhost:5000'
+    const baseURL = 'https://node-api-for-todo-app.onrender.com'
     const [user, setUser, tasks, setTasks] = useContext(UserContext);
     const [taskTitle, setTaskTitle] = useState('')
     const [name, setName] = useState('')
