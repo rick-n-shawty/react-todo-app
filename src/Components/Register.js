@@ -2,6 +2,7 @@ import { UserContext } from "../App";
 import { useContext, useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import axios from "axios";
+import { Link } from "react-router-dom";
 export default function Register(){
     const baseURL = 'https://node-api-for-todo-app.onrender.com'
     const [user, setUser] = useContext(UserContext);
@@ -69,7 +70,7 @@ export default function Register(){
                 </div>
                </button>
 
-                <a href="/login">Already have account?</a>
+                <Link to={"/login"}>Already have account?</Link>
             </div>
         </form>
     </div>
