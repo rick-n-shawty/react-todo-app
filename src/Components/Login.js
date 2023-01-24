@@ -1,6 +1,7 @@
 import { UserContext } from "../App";
 import { useContext, useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import axios from "axios";
 export default function Login(){
     const baseURL = 'https://node-api-for-todo-app.onrender.com'
@@ -72,8 +73,7 @@ export default function Login(){
                   <div className="arrow"></div>
                 </div>
                </button>
-
-                <a href="/register">Don't have account?</a>
+                <Link to={"/register"}>Don't have account?</Link>
             </div>
         </form>
     </div>
